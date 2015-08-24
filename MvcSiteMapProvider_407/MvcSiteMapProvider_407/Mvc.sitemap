@@ -3,11 +3,11 @@
             xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
 
-  <mvcSiteMapNode title="Home" controller="Home" action="Index">
-    <mvcSiteMapNode title="About" controller="Home" action="About"/>
-    <mvcSiteMapNode title="Product List" controller="Product" action="Index">
-      <mvcSiteMapNode title="Product Details" controller="Product" action="Details" visibility="SiteMapPathHelper,!*" preservedRouteParameters="id">
-        <mvcSiteMapNode title="Product Related Item" controller="ProductRelatedItem" action="Index" visibility="SiteMapPathHelper,!*" preservedRouteParameters="id,productId"/>
+  <mvcSiteMapNode title="Home" controller="Home" action="Index" includeAmbientValuesInUrl="true">
+    <mvcSiteMapNode title="About" controller="Home" action="About" includeAmbientValuesInUrl="true"/>
+    <mvcSiteMapNode title="Product List" controller="Product" action="Index" includeAmbientValuesInUrl="true">
+      <mvcSiteMapNode title="Product Details" controller="Product" action="Details" includeAmbientValuesInUrl="true" visibility="SiteMapPathHelper,!*" preservedRouteParameters="id">
+        <mvcSiteMapNode title="Product Related Item" controller="ProductRelatedItem" action="Index" includeAmbientValuesInUrl="true" visibility="SiteMapPathHelper,!*" preservedRouteParameters="id,productId"/>
       </mvcSiteMapNode>
     </mvcSiteMapNode>
   </mvcSiteMapNode>
